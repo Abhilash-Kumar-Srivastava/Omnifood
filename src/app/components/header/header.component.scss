@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+  /*Because we need stiky heading  */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  & .main-nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+
+    & .main-nav-link {
+      &:link,
+      :visited {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        font-size: 1.8rem;
+        transition: all 0.3s;
+      }
+
+      &:hover,
+      :active {
+        color: #cf711f;
+      }
+
+      &.nav-cta:link,
+      .nav-cta:visited {
+        padding: 1.6rem 2.4rem;
+        border-radius: 9px;
+        background-color: #e67e22;
+        color: #333;
+      }
+
+      &.nav-cta:hover,
+      .nav-cta:active {
+        background-color: #cf711f;
+        color: #fff;
+      }
+    }
+  }
+}
+.logo {
+  height: 2.2rem;
+}

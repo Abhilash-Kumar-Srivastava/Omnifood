@@ -1,0 +1,103 @@
+@mixin heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #333;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+
+@mixin button {
+  display: inline-block;
+  background-color: #e67e22;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+@mixin button-full {
+  & .btn--full:link,
+  .btn--full:visited {
+    background-color: #e67e22;
+    color: #fff;
+  }
+
+  & .btn--full:hover,
+  .btn--full:active {
+    background-color: #cf711f;
+  }
+}
+
+@mixin button-outline {
+  & .btn--outline:link,
+  .btn--outline:visited {
+    background-color: #fff;
+    color: #555;
+  }
+
+  & .btn--outline:hover,
+  .btn--outline:active {
+    background-color: #fdf2e9;
+    color: #555;
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+}
+
+@mixin margin-right-sm {
+  & .margin-right-sm {
+    margin-right: 1.6rem !important;
+  }
+}
+
+@mixin margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+@mixin container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+@mixin grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+@mixin grid--2--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@mixin grid--3--cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@mixin grid--4--cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@mixin grid--center--v {
+  align-items: center;
+}
+
+@mixin center-text {
+  text-align: center;
+}
+
+@mixin link-visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+@mixin hover-active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}

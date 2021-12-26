@@ -1,0 +1,110 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$omnifood-demo-primary: mat.define-palette(mat.$indigo-palette);
+$omnifood-demo-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$omnifood-demo-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$omnifood-demo-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $omnifood-demo-primary,
+      accent: $omnifood-demo-accent,
+      warn: $omnifood-demo-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($omnifood-demo-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+/*
+-------- 01 Typography
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+-- Font weight
+Default: 400
+Medium: 500
+Semi bold: 600
+Bold: 700
+-- Line height
+Default:1
+small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+
+- Letter Spacing
+-0.5px
+0.75px
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+------ 02 Colours
+
+-Primary: #e67e22
+-Tints: #fdf2e9
+#fae5d3
+-Shades: #cf711f
+--Accents: 
+--Greys: 
+  #555
+  #333
+
+ ---- 05 SHADOWS
+ 
+ ---- 06 BORDER-RADIOUS
+ Default: 9px
+ 11px
+
+ ---- 07 WHITESPACE
+
+ 
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  // font-size: 10px;
+  // Percentage of user's browser font-size setting 10/16
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
